@@ -27,11 +27,6 @@ module SslRequirement
     @@ssl_host = host
   end
   
-  def self.included(controller)
-    controller.extend(ClassMethods)
-    controller.before_filter(:ensure_proper_protocol)
-  end
-
   def self.disable_ssl_check?
     @@disable_ssl_check ||= false
   end
@@ -73,6 +68,11 @@ module SslRequirement
     end
 
   private
+    def self.included(controller)
+      controller.extend(ClassMethods)
+      controller.before_filter(:ensure_proper_protocol)
+    end
+
     def ensure_proper_protocol
       return true if SslRequirement.disable_ssl_check?
       return true if ssl_allowed?
