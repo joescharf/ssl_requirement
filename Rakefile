@@ -9,7 +9,7 @@ begin
 
     s.authors = ['RailsJedi', 'David Heinemeier Hansson']
     s.email = 'railsjedi@gmail.com'
-    s.homepage = 'http://github.com/jcnetdev/ssl_requirement'
+    s.homepage = 'http://github.com/tbmcmullen/ssl_requirement'
 
     s.has_rdoc = true
     s.rdoc_options = ["--main", "README"]
@@ -17,6 +17,7 @@ begin
 
     s.add_dependency 'rails', ['>= 2.1']
 
+    s.files = FileList["[A-Z]*.*", "{lib,test}/**/*"]
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
