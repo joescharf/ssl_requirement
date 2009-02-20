@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ssl_requirement}
-  s.version = "1.1.0"
+  s.version = "1.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["RailsJedi", "David Heinemeier Hansson"]
-  s.date = %q{2008-12-30}
+  s.date = %q{2009-02-19}
   s.description = %q{SSL requirement adds a declarative way of specifying that certain actions should only be allowed to run under SSL, and if they're accessed without it, they should be redirected.}
   s.email = %q{railsjedi@gmail.com}
   s.extra_rdoc_files = ["README"]
